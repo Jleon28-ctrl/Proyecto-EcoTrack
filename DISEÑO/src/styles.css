@@ -1,0 +1,345 @@
+/*general styles and variables*/
+
+:root {
+    --colorUno: #5FA04F;
+    --colorDos: #2563EB; 
+    --colorTres: #F97316;  
+    --colorCuatro: #1D2D44;   
+    --colorCinco: #F8FAFC;    
+    --colorSeis: #E2E8F0;     
+    --colorBlanco: #FFFFFF;
+    --fuentePrincipal: "Inter", sans-serif;
+    --fuenteSecundaria: "Roboto", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: var(--colorCinco);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    color: var(--colorCuatro);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* Estilos de botones reutilizables */
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.button--primary {
+    background-color: var(--colorDos);
+    color: var(--colorBlanco);
+}
+
+.button--secondary {
+    background-color: var(--colorTres);
+    color: var(--colorBlanco);
+}
+
+.button--login {
+    background-color: var(--colorDos);
+    color: var(--colorBlanco) !important;
+    border-radius: 10px;
+    padding: 0.5rem 1.2rem;
+}
+
+/* Syles for the header and navigation bar */
+
+.header {
+    padding: 1rem 0;
+    background-color: var(--colorCinco);
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo__container {
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.logo__img {
+    height: 100%;
+    object-fit: contain;
+}
+
+.navbar__logo {
+    color: var(--colorCuatro);
+    font-size: 2rem;
+    font-weight: 800;
+    cursor: pointer;
+    margin: 0;
+}
+
+.navbar__logo--primary {
+    color: var(--colorUno);
+}
+
+.navbar__menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.navbar__link {
+    color: var(--colorDos);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 800;
+    transition: color 0.2s ease;
+}
+
+.navbar__link--active {
+    color: var(--colorUno);
+}
+
+.navbar__link:hover {
+    text-decoration: underline;
+}
+
+.navbar__item:not(:last-child)::after {
+    content: "|";
+    margin-left: 1.2rem;
+    color: #94A3B8;
+    font-weight: 800;
+}
+
+/* Styles for the hero section */
+
+.hero {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 2.5rem 0;
+    gap: 2.5rem;
+}
+
+.hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align: center;
+}
+
+.hero__title {
+    color: var(--colorCuatro);
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.hero__subtitle {
+    display: block;
+    color: var(--colorCuatro);
+    font-size: 1.8rem;
+    text-transform: none;
+    margin-top: 0.3rem;
+}
+
+.hero__description {
+    color: #475569;
+    font-size: 1.1rem;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.hero__buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.hero__img {
+    width: 100%;
+    max-width: 550px;
+}
+
+.hero__img img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* styles for the about section */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 3rem 0;
+}
+
+.about__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.about__title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--colorCuatro);
+}
+
+.about__paragraph {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.about__stats {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.stats__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.stat-card {
+    background-color: var(--colorBlanco);
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--colorSeis);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.stat-card__number {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.stat-card__number--green { color: var(--colorUno); }
+.stat-card__number--blue { color: var(--colorDos); }
+.stat-card__number--orange { color: var(--colorTres); }
+
+.stat-card__label {
+    font-size: 0.85rem;
+    color: #64748B;
+    font-weight: 500;
+}
+
+/* Box de Monitoreo Activo */
+.about__status-box {
+    background-color: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    border-radius: 12px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.status-box__header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.status-box__dot {
+    width: 10px;
+    height: 10px;
+    background-color: #10B981;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px #10B981;
+}
+
+.status-box__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--colorCuatro);
+}
+
+.status-box__description {
+    font-size: 0.88rem;
+    color: #64748B;
+}
+
+/* media queries */
+@media(width > 768px){
+    .navbar{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .hero{
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+    }
+
+    .hero__content {
+        text-align: left;
+        flex: 1;
+    }
+
+    .hero__description {
+        margin: 0;
+    }
+
+    .hero__buttons {
+        justify-content: flex-start;
+    }
+
+    .hero__img {
+        flex: 1;
+    }
+
+    .about {
+        grid-template-columns: 1fr 1fr; /* Crea 2 columnas iguales */
+        align-items: start;
+    }
+}

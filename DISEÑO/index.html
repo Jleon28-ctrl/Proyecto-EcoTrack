@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Track</title>
+    <link rel="stylesheet" href="./src/normalize.css">
+    <link rel="stylesheet" href="./src/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/Logo.png" type="image/x-icon">
+</head>
+<body>
+    
+    <!-- Start - Section Header -->
+    <header class="header">
+        <nav class="navbar container">
+            <div class="navbar__brand">
+                <span class="logo__container">
+                    <img src="./images/Logo.png" alt="Logo Eco Track" class="logo__img">
+                </span>
+                <h1 class="navbar__logo"><span class="navbar__logo--primary">Eco</span> Track</h1>
+            </div>
+            
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="#" class="navbar__link navbar__link--active">INICIO</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">NOSOTROS</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">SERVICIOS</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">GALERÍA</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">CONTACTO</a></li>
+                <li class="navbar__item"><a href="#" class="button button--login">INICIAR SESIÓN</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- End - Section Header -->
+
+    <!-- Main Content Wrapper -->
+    <main>
+        <!-- Start - Hero Section -->
+        <section class="hero container" id="inicio">
+            <div class="hero__content">
+                <h2 class="hero__title">
+                    GESTIÓN INTELIGENTE DE RESIDUOS URBANOS: 
+                    <span class="hero__subtitle">Ciudades Sostenibles con IoT</span>
+                </h2>
+                <p class="hero__description">
+                    Optimice la recolección, reduzca costos y mejore el medio ambiente con nuestra tecnología avanzada.
+                </p>
+                <div class="hero__buttons">
+                    <a href="#" class="button button--primary hero__demo">SOLICITAR DEMO</a>
+                    <a href="#" class="button button--secondary hero__about">CONOCER MÁS</a>
+                </div>
+            </div>
+
+            <div class="hero__img">
+                <img src="./images/banner.png" alt="Ilustración de ciudad inteligente con recolección de residuos IoT">
+            </div>
+        </section>
+        <!-- End - Hero Section -->
+
+        <!-- Start - About Section -->
+        <section class="about container" id="nosotros">
+            <div class="about__text">
+                <h2 class="about__title">Sobre Nosotros</h2>
+                <p class="about__paragraph">
+                    En <strong>Eco Track</strong>, impulsamos la gestión inteligente de residuos urbanos conectando contenedores, flotas de recolección y municipios a través de tecnología IoT avanzada.
+                </p>
+                <p class="about__paragraph">
+                    Nuestra misión es ofrecerte una plataforma en tiempo real rápida, segura y eficiente, para que optimizar las rutas de recolección y mantener limpia la ciudad sea un proceso automatizado e intuitivo.
+                </p>
+                <p class="about__paragraph">
+                    Creemos en un futuro más sostenible y limpio, integrando análisis de datos y monitoreo dinámico para acompañar a las comunidades en cada paso hacia la innovación ambiental.
+                </p>
+            </div>
+
+            <div class="about__stats">
+                <div class="stats__grid">
+                    <div class="stat-card">
+                        <span class="stat-card__number stat-card__number--green">+85%</span>
+                        <span class="stat-card__label">Eficiencia Operativa</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-card__number stat-card__number--blue">-30%</span>
+                        <span class="stat-card__label">Emisiones de CO₂</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-card__number stat-card__number--orange">24/7</span>
+                        <span class="stat-card__label">Monitoreo IoT</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-card__number stat-card__number--green">100%</span>
+                        <span class="stat-card__label">Trazabilidad</span>
+                    </div>
+                </div>
+
+                <div class="about__status-box">
+                    <div class="status-box__header">
+                        <span class="status-box__dot"></span>
+                        <h3 class="status-box__title">Sistema de Monitoreo Activo</h3>
+                    </div>
+                    <p class="status-box__description">
+                        Sensores inteligentes midiendo volumen de llenado y alertas de flota en tiempo real.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- End - About Section -->
+    </main>
+
+</body>
+</html>
